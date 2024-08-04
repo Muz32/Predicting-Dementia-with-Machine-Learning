@@ -210,4 +210,8 @@ Predicting-Dementia-with-Machine-Learning (Root Folder)
 │   ├── classification report-optimised model.png
 │   └── dataset features.png
 ├── .gitignore
+<<<<<<< HEAD
 └── README.md   
+=======
+└── README.md
+>>>>>>> a8316bc07835f4369626a8ca969ecddc26e1812a
