@@ -111,7 +111,7 @@ The following are key insights from the above table:
 ### Overall Model Performance
 The model demonstrates excellent performance metrics with an accuracy rate of 97%, suggesting it is highly effective in predicting dementia. It achieves high precision and recall across both classes, resulting in a robust and reliable model suitable for practical application in medical diagnostics and research. However, there is still room for improvement to address the remaining false negatives and false positives predicted from the testing data. Therefore, a second attempt was made to further improve accuracy and optimise the model.
 
-## Optimised Model:
+## Optimised Model
 ### Neurons, Layers, and Activation Functions Used
 - This time model was defined using three hidden layers and one output layer
   - Input layer: 45 features
@@ -135,30 +135,79 @@ The following table outlines the scores from the classification report:
 ![Classification report](./Images/classification%20report-optimised%20model.png)
 
 ### Optimised Model Performance
-The optimized model demonstrates outstanding performance, as indicated by the confusion matrix and classification report. The confusion matrix shows only one misclassification, with 129 true negatives, 120 true positives, no false positive and just one false negative. The model achieves a precision of 0.99 and recall of 1.00 for classifying non-dementia cases, and perfect precision (1.00) and near-perfect recall (0.99) for dementia cases. The overall accuracy score is 1.00, indicating the model’s exceptional ability to accurately predict dementia. This high level of performance suggests the model is highly reliable and effective for practical applications in medical diagnostics and research.
+The optimised model demonstrates outstanding performance, as indicated by the confusion matrix and classification report. The confusion matrix shows only one misclassification, with 129 true negatives, 120 true positives, no false positive and just one false negative. The model achieves a precision of 0.99 and recall of 1.00 for classifying non-dementia cases, and perfect precision (1.00) and near-perfect recall (0.99) for dementia cases. The overall accuracy score is 1.00, indicating the model’s exceptional ability to accurately predict dementia. This high level of performance suggests the model is highly reliable and effective for practical applications in medical diagnostics and research.
+
+## Random Forest Model
+The Random Forest (RF) model was also used to compare results on prediction accuracy and robusteness of the DNN model. When the data was trained with the RF model, all false positive and negative results were eliminated in the first run. This is illustrated in the following confusion matrix generated using the RF model:
+
+![Confusion Matrix](./Images/confusion%20matrix-random%20forest%20model.png)
+
+The RF model achieved perfect classification outcomes for both classes, with no false negatives or false positives indicating a perfect accuracy score of 1.0. In comparison, the DNN model, while highly accurate, had one false negative in the optimised model. Although this minor discrepancy may not be significant in many practical applications, in a critical context like medical diagnostics, the Random Forest model's perfect performance is preferable. Overall, both models are highly reliable, but the Random Forest model demonstrates a slightly superior capability in this case.
+
+### Analysis of Feature Importance
+The RF model allows extraction of feature importance from the trained model to identify which features have the most significant impact on the prediction outcomes. This analysis helps in understanding the underlying patterns in the data. The horizontal bar chart below depicts the feature importances:
+
+![Feature Importance](./Images/feature%20importances.png)
+
+In the chart, the Feature importance scores indicate the contribution of each feature in making predictions in the RF model. Higher values indicate more significant features. Here is an analysis of the feature importance output:
+
+- **Prescription_None (0.317741)**:
+  - This feature has the highest importance, indicating that whether a patient has no prescription is a critical factor in predicting dementia.
+
+- **Cognitive_Test_Scores (0.271577)**:
+  - Cognitive test scores are also highly important, as they directly relate to cognitive function, a key indicator of dementia.
+
+- **Dosage in mg (0.215594)**:
+  - The dosage of medication in milligrams is the third most important feature, suggesting that medication dosage significantly impacts dementia predictions.
+
+- **Depression_Status_No (0.047734)** and **Depression_Status_Yes (0.043856)**:
+  - Depression status, whether "No" or "Yes," is important, reflecting the connection between mental health and dementia.
+
+- **APOE_ε4_Negative (0.020965)**:
+  - The APOE ε4 allele is a known genetic risk factor for dementia. Whether a patient is negative for this allele is moderately important.
+
+- **Prescription_Galantamine (0.020038)**, **Prescription_Rivastigmine (0.014388)**, **Prescription_Memantine (0.013713)**, **Prescription_Donepezil (0.009260)**:
+  - Specific prescriptions for dementia (Galantamine, Rivastigmine, Memantine, Donepezil) have varying degrees of importance, reflecting their roles in treatment.
+
+- **APOE_ε4_Positive (0.007215)**:
+  - Being positive for the APOE ε4 allele is less important than being negative but still contributes to the model.
+
+- **Smoking_Status_Current Smoker (0.006524)**:
+  - Current smoking status has a small impact, indicating some connection to dementia risk.
+
+- **Other features**:
+  - Many features have very low importance scores, such as BloodOxygenLevel (0.002067), Age (0.001656), BodyTemperature (0.001563), etc. These features contribute minimally to the model's predictions.
+
+### Key Insights
+
+- **Top Contributing Features**: The most important features are related to prescriptions, cognitive test scores, and medication dosage. These factors are critical in the context of dementia and its treatment.
+
+- **Mental and Genetic Health**: Depression status and the APOE ε4 allele, both known to be associated with dementia, have moderate importance.
+
+- **Other Health Metrics**: Traditional health metrics like Alcohol Level, Blood Oxygen Level, and Age have relatively low importance in this model.
+
+- **Lifestyle and Demographics**: Factors like physical activity, education level, and smoking status also show low importance, suggesting that the model relies more on direct indicators of cognitive health and treatment.
+
+
+The **RF model** relies heavily on specific medical and cognitive indicators to predict dementia. Understanding the importance of these features can guide medical professionals in focusing on critical areas for early detection and treatment of dementia. With a perfect accuracy score of 1.0, the model demonstrates exceptional reliability and effectiveness for practical applications in medical diagnostics and research. The insights from this feature importance analysis highlight the critical factors influencing dementia predictions and reinforce the model's robustness.
+
 
 ## Files & Folders
 ```
 Predicting-Dementia-with-Machine-Learning (Root Folder)
 ├── Dementia Prediction - with Deep Neural Networks.ipynb #Jupyter notebook for the initial deep neural network model.
-├── Dementia Prediction - with Deep Neural Networks-Optimised.ipynb #Jupyter notebook for the optimized deep neural network model
+├── Dementia Prediction - with Deep Neural Networks-Optimised.ipynb #Jupyter notebook for the optimised deep neural network model
 ├── Dementia Prediction - with Random Forest Model.ipynb #Jupyter notebook for the random forest model.
 ├── Data
 │   ├── dementia_data.db # Sqlite Database file with dementia-related data
-│   └── dementia_patients_health_data.csv # CSV file with patient health data.
+│   └── dementia_patients_health_data.csv #CSV file with patient health data.
 ├── Project Proposal
-│   └── Machine Learning Project Proposal.docx # Document outlining the project proposal.
-├── Images # Folder containing images used in the project.
+│   └── Machine Learning Project Proposal.docx #Document outlining the project proposal.
+├── Images #Folder containing images used in the project.
 │   ├── confusion matrix-initial model.png
 │   ├── classification report-initial model.png
 │   ├── confusion matrix-optimised model.png
 │   ├── classification report-optimised model.png
 │   └── dataset features.png
 ├── .gitignore
-└── README.md
-          
-
-              
-
-
-
+└── README.md   
