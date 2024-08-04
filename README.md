@@ -111,7 +111,7 @@ The following are key insights from the above table:
 ### Overall Model Performance
 The model demonstrates excellent performance metrics with an accuracy rate of 97%, suggesting it is highly effective in predicting dementia. It achieves high precision and recall across both classes, resulting in a robust and reliable model suitable for practical application in medical diagnostics and research. However, there is still room for improvement to address the remaining false negatives and false positives predicted from the testing data. Therefore, a second attempt was made to further improve accuracy and optimise the model.
 
-## Optimised Model:
+## Optimised Model
 ### Neurons, Layers, and Activation Functions Used
 - This time model was defined using three hidden layers and one output layer
   - Input layer: 45 features
@@ -156,9 +156,3 @@ Predicting-Dementia-with-Machine-Learning (Root Folder)
 │   └── dataset features.png
 ├── .gitignore
 └── README.md
-          
-
-              
-
-
-
