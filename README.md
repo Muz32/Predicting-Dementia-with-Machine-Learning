@@ -52,7 +52,7 @@ The description of dataset features is available at the data source link provide
 - **Optimised Model**: An optimised model was developed to improve accuracy. This was done in a separate Jupyter Notebook file `Dementia Prediction - Deep Neural Networks - Optimised`.
 - **Comparison with Random Forest**: A Random Forest model was also used to compare performance with the DNN model.
   
-## Initial Model
+## Initial DNN Model
 ### Neurons, Layers, and Activation Functions Used
 - The model was defined using two hidden layers and one output layer
     - Input layer: 45 features
@@ -111,7 +111,7 @@ The following are key insights from the above table:
 ### Overall Model Performance
 The model demonstrates excellent performance metrics with an accuracy rate of 97%, suggesting it is highly effective in predicting dementia. It achieves high precision and recall across both classes, resulting in a robust and reliable model suitable for practical application in medical diagnostics and research. However, there is still room for improvement to address the remaining false negatives and false positives predicted from the testing data. Therefore, a second attempt was made to further improve accuracy and optimise the model.
 
-## Optimised Model
+## Optimised DNN Model
 ### Neurons, Layers, and Activation Functions Used
 - This time model was defined using three hidden layers and one output layer
   - Input layer: 45 features
