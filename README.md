@@ -15,8 +15,8 @@ With the use of machine learning technologies, we aim to predict the likelihood 
 
 ## General Research Questions:
 - **Prediction Accuracy:** How accurately can we predict the onset of dementia using demographic, lifestyle, and medical data?
-- **Feature Importance:** Which features (e.g., age, gender, lifestyle factors, medical history) are the most significant predictors for dementia?
 - **Model Performance:** How do different machine learning models (Deep Neural Networks and Random Forest,) compare in terms of prediction accuracy and robustness?
+- **Feature Importance:** Which features (e.g., age, gender, lifestyle factors, medical history) are the most significant predictors for dementia?
 
 ## Data Source
 
@@ -190,6 +190,12 @@ In the chart, the Feature importance scores indicate the contribution of each fe
 
 
 The **RF model** relies heavily on specific medical and cognitive indicators to predict dementia. Understanding the importance of these features can guide medical professionals in focusing on critical areas for early detection and treatment of dementia. With a perfect accuracy score of 1.0, the model demonstrates exceptional reliability and effectiveness for practical applications in medical diagnostics and research. The insights from this feature importance analysis highlight the critical factors influencing dementia predictions and reinforce the model's robustness.
+
+## Model Applications
+- **Aid in Early Medical Diagnosis**: The models can analyse complex datasets to identify early signs of dementia, potentially before symptoms become apparent. This can lead to earlier interventions and better patient outcomes.
+- **Empower At-Risk Patients:** The models enable at-risk patients to take proactive steps in managing their health by identifying and modifying risk factors such as smoking, alcohol intake, obesity, physical inactivity, and poor diet. This empowerment can lead to better health outcomes and potentially delay the onset of dementia.
+- **Government Resource Allocation in Disease Management:** By predicting the prevalence and progression of dementia in different populations, the machine learning model can help governments allocate resources more effectively. This includes planning for healthcare services, support programs, and infrastructure needs.
+- **Accelerate Research:** Machine learning can expedite research by analysing large volumes of data from clinical studies, genetic research, and other sources. This can lead to new insights into the causes and progression of dementia, and potentially to the development of new treatments or preventive measures.
 
 
 ## Files & Folders
