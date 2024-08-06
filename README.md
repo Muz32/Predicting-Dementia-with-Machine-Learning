@@ -1,4 +1,4 @@
-# Dementia Prediction with Deep Neural Network Models
+# Dementia Prediction Using Machine Learning Models
 
 This project is a submission for the Data Analytics Boot Camp, a collaborative educational initiative by Monash University and EdX.
 
@@ -13,12 +13,18 @@ This project is a submission for the Data Analytics Boot Camp, a collaborative e
 
 With the use of machine learning technologies, we aim to predict the likelihood of an individual being diagnosed with dementia based on demographic, lifestyle, and medical data. The effectiveness of the model would aid in practical applications such as early medical diagnosis, government resource allocation in disease management and research in the area.
 
-## General Research Questions
-
+## Research Questions
+#### General:
 - **Prediction Accuracy:** How accurately can we predict the onset of dementia using demographic, lifestyle, and medical data?
 - **Model Performance:** How do different machine learning models (Deep Neural Networks and Random Forest,) compare in terms of prediction accuracy and robustness?
 - **Feature Importance:** Which features (e.g., age, gender, lifestyle factors, medical history) are the most significant predictors for dementia?
 
+### Disease-Specific:
+- What lifestyle and genetic factors are most strongly associated with the risk of developing dementia?
+- How early can we predict the onset of dementia with reasonable accuracy?
+- What role does genetic data play in enhancing the accuracy of dementia predictions?
+- Can prediction models help optimise healthcare resource allocation for chronic disease management?
+   
 ## Data Source
 
 The data for this project was taken from `Kaggle.com` under the title `Dementia Patient Health, Prescriptions ML Dataset`, which can be accessed [here](https://www.kaggle.com/datasets/kaggler2412/dementia-patient-health-and-prescriptions-dataset).
