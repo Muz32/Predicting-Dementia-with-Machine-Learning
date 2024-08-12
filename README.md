@@ -19,7 +19,7 @@ With the use of machine learning technologies, we aim to predict the likelihood 
 - **Model Performance:** How do different machine learning models (Deep Neural Networks and Random Forest,) compare in terms of prediction accuracy and robustness?
 - **Feature Importance:** Which features (e.g., age, gender, lifestyle factors, medical history) are the most significant predictors for dementia?
 
-### Disease-Specific:
+#### Disease-Specific:
 - What lifestyle and genetic factors are most strongly associated with the risk of developing dementia?
 - How early can we predict the onset of dementia with reasonable accuracy?
 - What role does genetic data play in enhancing the accuracy of dementia predictions?
